@@ -25,8 +25,14 @@ const StyledGrid = styled.ul`
   }
 `
 const StyledGridCell = styled.li`
-  display:block;
+  display:flex;
+  align-items:center;
   list-style-type:none;
   margin-bottom:var(--spacing-sm);
   grid-column: span ${props => props.span};
+  justify-items: center;
+
+  > * {
+    width:100%;
+  }
 `
