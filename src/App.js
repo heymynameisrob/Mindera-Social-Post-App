@@ -2,12 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { Grid } from './components/Layout';
 import { Canvas } from './components/Canvas';
+import { ControlPanel } from './components/Panel';
 
 const App = () => {
   return <StyledContainer>
     <Grid cols="8">
       <aside span="3">
-        <p>Panel</p>
+        <ControlPanel />
       </aside>
       <main span="5">
         <Canvas />
