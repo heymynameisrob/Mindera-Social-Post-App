@@ -2,12 +2,19 @@ import React, { useEffect } from 'react';
 import SVG from 'react-inlinesvg';
 import styled from 'styled-components';
 import { useData } from '../context/DataProvider';
-
 import logo from '../static/logo.svg'
 import gridImage from '../static/grid.png';
 
 export const Hiring = () => {
   const { alignment, content } = useData();
+
+  useEffect(() => {
+    let link = document.createElement("link");
+    link.href = "https://fonts.googleapis.com/css2?family=Anton&display=swap";
+    link.type = "text/css";
+    link.rel = "stylesheet";
+    document.getElementsByTagName("head")[0].appendChild(link);
+  }, [])
 
   const title = { display: 'inline-block', backgroundColor: '#000', padding: '1rem', textAlign: 'left', marginRight: 'auto', marginBottom: '5%' };
   const location = { color: '#FEDE00', fontSize: '80px', fontFamily: 'Anton', textTransform: 'uppercase' }
